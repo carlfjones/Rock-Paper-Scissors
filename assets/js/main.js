@@ -1,4 +1,6 @@
-let options = document.getElementsByClassName("option")
+let options = document.getElementsByClassName("option");
+let choices = ["rock", "paper", "scissors"];
+
 
 for (let i = 0; i < options.length; i++) {
     let option = options[i];
@@ -23,6 +25,10 @@ function disableOptions () {
 
 function battle (option) {
     let choice = option.dataset.choice;
-    console.log(choice);
+    
+    let aiChoice = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+    console.log(aiChoice);
+    
+    console.log(choices[aiChoice]);
     
 }
