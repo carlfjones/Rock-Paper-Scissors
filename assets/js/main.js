@@ -7,6 +7,8 @@ let score = 0;
 let aiScore = 0;
 let storage = window.localStorage;
 
+
+
 if (storage.getItem("score")) {
     score = storage.getItem("score");
 };
@@ -51,9 +53,15 @@ function battle (option) {
         
     } else if (aiChoice === winState[choice]) {
         option.classList.add("winner");
+        score++;
+        storage.setItem("score", score);
+        score_elem.innerHTML = score;
         console.log("Player wins");
     } else {
         option.classList.add("loser");
+        aiScore++;
+        storage.setItem("aiScore", aiScore);
+        aiScore_elem.innerHTML = aiScore;
         console.log("Ai wins");
         
     }
