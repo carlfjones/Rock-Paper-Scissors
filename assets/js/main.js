@@ -3,11 +3,22 @@ let choices = ["rock", "paper", "scissors"];
 let winState = { rock: "scissors", paper: "rock", scissors: "paper"};
 let battle_elem = document.getElementById("battle");
 let reset_elem = document.getElementById("reset");
-
 let score = 0;
+let aiScore = 0;
 let storage = window.localStorage;
 
-if (storage.getItem("score"));
+if (storage.getItem("score")) {
+    score = storage.getItem("score");
+};
+
+if (storage.getItem("aiScore")) {
+    score = storage.getItem("aiScore");
+};
+
+let score_elem = document.getElementById("score");
+let aiScore_elem = document.getElementById("aiScore");
+score_elem.innerHTML = score;
+aiScore_elem.innerHTML = aiScore;
 
 for (let i = 0; i < options.length; i++) {
     let option = options[i];
