@@ -7,7 +7,7 @@ let score = 0;
 let aiScore = 0;
 let storage = window.localStorage;
 
-
+window.onload = window.localStorage.clear();
 
 if (storage.getItem("score")) {
     score = storage.getItem("score");
